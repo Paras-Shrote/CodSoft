@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+    double num1, num2, result;
+    char operand, choice='\0';
+    bool error=0;
+    
+    do{
+    
+    error=0;
+    cout << "Enter the first operand: \n";
+    cin >> num1;
+
+    cout << "Enter an operation(+, -, *, /): \n";
+    cin >> operand;
+    cout << "Enter the second operand: \n";
+    cin >> num2;
+
+    if(operand=='+')
+    {
+	result=num1+num2;
+	break;
+    }
+    else if(operand=='-')
+    {
+	result=num1-num2;
+	break;
+    }
+    else if(operand=='*')
+    {
+	result=num1*num2;
+	break;
+    } 
+    else if(operand=='/')
+    {
+	if (b != 0) 
+	{
+	result = a / b;
+        }
+        else 
+	{
+	cout << "Error. Invalid input." << endl;
+	error=1;
+	}
+	break;
+    }
+    else ()
+    {
+ 	cout << "Error: Invalid operation." << endl;
+	error=1;
+	break;
+    }
+
+    if(!error)
+     {
+        cout << num1 << " " << operand << " " << num2 << " = " << result << endl;
+        cout << "Perform another calculation? (Y/N): \n";
+        cin >> choice;
+     }
+    } while (choice == 'y' || choice == 'Y');
+
+    return 0;
+}
